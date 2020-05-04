@@ -19,4 +19,4 @@ for(let i = 0; i < 5; i++){
     a[i] = Math.floor(Math.random() * (10 - 0 + 1) );
 }
 
-con
+///보류 이따풀기
