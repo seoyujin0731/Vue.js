@@ -10,13 +10,16 @@ function sum (...a) {
 
 function test_sum (f){
 
-    a[i] = Math.floor(Math.random() * (10 - 0 + ) );
+    for(let i = 0; i < 5; i++){
+        a[i] = Math.floor(Math.random() * (10 - 0 + 1) );
+    }
+    console.log(a);
+
+    
 }
 
 
 
-for(let i = 0; i < 5; i++){
-    a[i] = Math.floor(Math.random() * (10 - 0 + 1) );
-}
+
 
 ///보류 이따풀기
