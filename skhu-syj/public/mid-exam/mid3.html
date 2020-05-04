@@ -8,21 +8,26 @@
       <style>
         div#app { padding: 30px; margin: 30px auto; max-width: 400px; 
           border: 1px solid #ccc; box-shadow: 3px 3px 3px #aaa;  }
-        span { display: inline-block; margin: 5px; padding: 8px 15px; 
+        input { display: inline-block; margin: 5px; padding: 8px 15px; 
           border: 0.5px solid black; cursor: pointer; width: 10em;}
         div#app > div { margin-top: 20px; }
         button { padding: 0.5em 2em; }
+        span { display: inline-block; margin: 5px; padding: 8px 15px; 
+            border: 1px solid black; }
+
       </style>
     </head>
     <body>
       <div id="app">
-        <span v-for="i in size">
+        <input type="text" v-for="i in size" value="0"> 
+            
+        
+          <button type="button" v-on:click="random(value)">생성</button>
+        
+          <span v-for="i in size">
             {{ i }}
-        </span>
-        <input type="te"> 
-        
-          <button type="button" v-on:click="increase">생성</button>
-        
+          </span>
+      
       </div>
     
       <script type="text/javascript">
@@ -30,11 +35,13 @@
           el: '#app',
           data: {
             i : 0,
-            size: i
+            size: value
           },
           methods: {
-            increase() {
-              this.i++;
+            random(value) {
+                for(let i = 0; i < value; i++){
+                    a[i] = Math.floor(Math.random() * (10 - 0 + 1) );
+                }    
             },
             
           }
@@ -42,3 +49,5 @@
        </script>
     </body>    
     </html>
+
+    
