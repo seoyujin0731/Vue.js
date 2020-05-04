@@ -1,0 +1,44 @@
+
+
+
+<html lang="ko">
+    <head>
+      <meta charset="utf-8" />
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <style>
+        div#app { padding: 30px; margin: 30px auto; max-width: 400px; 
+          border: 1px solid #ccc; box-shadow: 3px 3px 3px #aaa;  }
+        span { display: inline-block; margin: 5px; padding: 8px 15px; 
+          border: 0.5px solid black; cursor: pointer; width: 10em;}
+        div#app > div { margin-top: 20px; }
+        button { padding: 0.5em 2em; }
+      </style>
+    </head>
+    <body>
+      <div id="app">
+        <span v-for="i in size">
+            {{ i }}
+        </span>
+        <input type="te"> 
+        
+          <button type="button" v-on:click="increase">생성</button>
+        
+      </div>
+    
+      <script type="text/javascript">
+        var app = new Vue({
+          el: '#app',
+          data: {
+            i : 0,
+            size: i
+          },
+          methods: {
+            increase() {
+              this.i++;
+            },
+            
+          }
+        })
+       </script>
+    </body>    
+    </html>

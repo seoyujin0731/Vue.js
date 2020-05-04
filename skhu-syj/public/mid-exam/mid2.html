@@ -16,10 +16,10 @@
       <div id="app">
           <div>
         <button type="button" v-bind:value = "true" disabled = "disabled" v-model="visible">보이기</button>
-        <button type="button" v-bind:value = "false"  v-model="visible">감추기</button>
+        <button type="button" v-bind:value = "false" disabled = "!disabled" v-model="visible">감추기</button>
     </div>
        
-        <span class="yellow" v-show ="true">  </span>
+        <span class="yellow" v-show ="visible">  </span>
         <label>
           
       </div>
@@ -28,7 +28,8 @@
         var app = new Vue({
           el: '#app',
           data: {
-            value: true
+            visible: true,
+            disabled: false
           }
         })
        </script>
