@@ -15,7 +15,7 @@ function test_sum (f){
     }
     console.log(a);
 
-    
+    f(a)
 }
 
 
